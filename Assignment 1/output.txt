@@ -1,0 +1,32 @@
+Vehicle Description (ID: 58226771387855278446696991956)
+Owner: Rahat Hossain
+Model: BMWx7
+Manufacturing Date: 17-6
+Manufacturing Year: 2021
+Manufacturer: BMW
+
+Vehicle Description (ID: 1058386377018547464445209904139)
+Owner: Nafisa Naznin
+Model: Corolla
+Manufacturing Date: 27-6
+Manufacturing Year: 2021
+Manufacturer: Toyota
+
+Vehicle Description (ID: 722442184122353424529384137579)
+Owner: Lil Rapper
+Model: ID.4
+Manufacturing Date: 30-6
+Manufacturing Year: 2020
+Manufacturer: Volkswagen
+
+     city     country registration_type
+0   Dhaka  Bangladesh      Registration
+1  Mumbai       India             Renew
+                                id          owner    model manufacturing_date manufacturing_year manufacturer        city     country registration_type
+0    58226771387855278446696991956  Rahat Hossain    BMWx7               17-6               2021          BMW       Dhaka  Bangladesh      Registration
+1  1058386377018547464445209904139  Nafisa Naznin  Corolla               27-6               2021       Toyota      Sylhet  Bangladesh      Registration
+2   722442184122353424529384137579     Lil Rapper     ID.4               30-6               2020   Volkswagen  Chattogram  Bangladesh      Registration
+3    58226771387855278446696991956  Rahat Hossain    BMWx7               17-6               2021          BMW      Mumbai       India             Renew
+                              id          owner  model manufacturing_date manufacturing_year manufacturer    city     country registration_type
+0  58226771387855278446696991956  Rahat Hossain  BMWx7               17-6               2021          BMW   Dhaka  Bangladesh      Registration
+3  58226771387855278446696991956  Rahat Hossain  BMWx7               17-6               2021          BMW  Mumbai       India             Renew

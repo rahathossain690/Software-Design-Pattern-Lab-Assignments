@@ -86,10 +86,13 @@ if __name__ == '__main__':
 
 
 
+    """showing a single vehicle registry information"""
+    print(vehicle_1.registry_information())
+
 
     
-    """Showing the vehicle registry"""
-    print(vehicleRegistraionSystem.datastore)
+    """Showing all vehicle registry information"""
+    print(vehicleRegistraionSystem.registry_information())
 
 
 

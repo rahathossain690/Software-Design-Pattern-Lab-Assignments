@@ -6,9 +6,11 @@ Rahat Hossain
 from random import getrandbits                                          # for random id generations
 import pandas                                                           # For data storing purposes
 
+from RegistryInterface import RegistryInterface                         # Abstract class for implementation
 
-class Vehicle():
-    """Vehicle class"""
+
+class Vehicle(RegistryInterface):
+    """Vehicle class that implements Registry interface"""
 
     def __init__(self, manufacturing_date, model, manufacturing_year, manufacturer, owner):
         """

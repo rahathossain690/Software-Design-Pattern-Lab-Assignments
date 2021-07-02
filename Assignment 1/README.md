@@ -1,5 +1,5 @@
 # Assignment 1
-Python code for assignment 1. The following code implements Singeleton and Adapter design pattern.
+Python code for assignment 1.
 
 # Installing
 1. Install python and pip.
@@ -20,3 +20,11 @@ can be renewed multiple times for the same owner and vehicle at the same county 
 one. It is necessary to keep track of the City in which the renewal was made. The vehicle
 registration system is to be designed for quick retrieval of information about any vehicle or any
 vehicle owner (in any City) and the related registration details.
+
+# File Structure
+1. RegistryInterface.py: Abstract class for vehicle and vehicle-registry-system.
+2. Vehicle.py: Vehicle class implementation.
+3. VehicleRegistrationSystem.py: Vehicle-registration-system class implementation. 
+4. RegistrationAdapter.py: Registration adapter for Vehicle and vehicleRegistrationSystem class instances.
+5. Main.py: Example driver program.
+6. Output.txt: Output for the current Main.py.

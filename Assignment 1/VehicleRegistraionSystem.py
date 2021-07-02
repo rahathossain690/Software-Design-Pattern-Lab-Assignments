@@ -4,8 +4,10 @@ Rahat Hossain
 """
 
 import pandas                                                               # for data storage
+from RegistryInterface import RegistryInterface                             # Abstract class for implementation
 
-class VehicleRegistraionSystem:
+class VehicleRegistraionSystem(RegistryInterface):
+    """Vehicle Registration System that implements RegistryInterface"""
 
     __instance = None                                                       # object instance is held here 
 
@@ -48,7 +50,7 @@ class VehicleRegistraionSystem:
             'registration_type': 'Renew'
         }, ignore_index=True)
 
-    def get_datastore(self):
+    def registry_information(self):
         """
             Get whole data storage
         """
