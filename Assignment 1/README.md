@@ -1,5 +1,5 @@
 # Assignment 1
-Python code for assignment 1. The following code implements Singeleton and Adaptor design pattern.
+Python code for assignment 1. The following code implements Singeleton and Adapter design pattern.
 
 # Installing
 1. Install python and pip.
