@@ -13,14 +13,14 @@ class VehicleRegistraionSystem(RegistryInterface):
 
     def __init__(self):
         columns = ['id', 'owner', 'model', 'manufacturing_date', 'manufacturing_year', 'manufacturer', 'city', 'country', 'registration_type']
-        self.datastore = pandas.DataFrame(columns=columns)                  # declaring pandas dataframe
+        self.__datastore = pandas.DataFrame(columns=columns)                  # declaring pandas dataframe. A private variable
 
     def register(self, id, owner, model, manufacturing_date, manufacturing_year, manufacturer, city, country):
         """Creates a registration data entry"""
 
-        if self.datastore[self.datastore['id'] == id].size != 0:            # if vehicle is already registered then raises exception
+        if self.__datastore[self.__datastore['id'] == id].size != 0:            # if vehicle is already registered then raises exception
             raise Exception("Vehicle already registered. Please renew.")
-        self.datastore = self.datastore.append({
+        self.__datastore = self.__datastore.append({
             'id': id,
             'owner': owner,
             'model': model,
@@ -35,10 +35,10 @@ class VehicleRegistraionSystem(RegistryInterface):
     def renew(self, id, owner, model, manufacturing_date, manufacturing_year, manufacturer, city, country):
         """Creates a renew data entry"""
 
-        if self.datastore[self.datastore['id'] == id].size == 0:            # if vehicle is already registered then raises exception
+        if self.__datastore[self.__datastore['id'] == id].size == 0:            # if vehicle is already registered then raises exception
             raise Exception("Vehicle is not registered yet.")
 
-        self.datastore = self.datastore.append({
+        self.__datastore = self.__datastore.append({
             'id': id,
             'owner': owner,
             'model': model,
@@ -54,13 +54,13 @@ class VehicleRegistraionSystem(RegistryInterface):
         """
             Get whole data storage
         """
-        return self.datastore
+        return self.__datastore
 
     def search(self, atribute, value):
         """
             Method for searching in the data storage
         """
-        return self.datastore[self.datastore[atribute] == value]
+        return self.__datastore[self.__datastore[atribute] == value]
     
     def __new__(self): 
         """

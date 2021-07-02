@@ -23,7 +23,8 @@ class Vehicle(RegistryInterface):
         self.manufacturer = manufacturer
         self.owner = owner
         columns = ['city', 'country', 'registration_type']              # Columns
-        self.datastore = pandas.DataFrame(columns=columns)              # Creating a pandas dataframe
+        self.__datastore = pandas.DataFrame(columns=columns)            # Creating a pandas dataframe. A private variable
+
     
 
 
@@ -46,10 +47,10 @@ class Vehicle(RegistryInterface):
         """
             Registers current vehicle
         """
-        if self.datastore.size != 0:                                       # if vehicle is already registered then raises exception
+        if self.__datastore.size != 0:                                       # if vehicle is already registered then raises exception
             raise Exception("Vehicle already registered. Please renew.")
 
-        self.datastore = self.datastore.append({
+        self.__datastore = self.__datastore.append({
             'city': city,
             'country': country,
             'registration_type': 'Registration'
@@ -62,10 +63,10 @@ class Vehicle(RegistryInterface):
         """
             Renew current vehicle to some city and country
         """
-        if self.datastore.size == 0:                                       # if vehicle is not already registered then raises exception
+        if self.__datastore.size == 0:                                       # if vehicle is not already registered then raises exception
             raise Exception("Vehicle is not registered yet.")
             
-        self.datastore = self.datastore.append({
+        self.__datastore = self.__datastore.append({
             'city': city,
             'country': country,
             'registration_type': 'Renew'
@@ -77,4 +78,4 @@ class Vehicle(RegistryInterface):
         """
             returns registry informations
         """
-        return self.datastore
+        return self.__datastore

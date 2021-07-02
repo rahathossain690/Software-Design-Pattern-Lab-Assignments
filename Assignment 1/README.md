@@ -1,5 +1,5 @@
 # Assignment 1
-Python code for assignment 1.
+Python code for assignment 1. This code uses composite, singeleton and adapter design pattern.
 
 # Installing
 1. Install python and pip.
