@@ -28,3 +28,7 @@ vehicle owner (in any City) and the related registration details.
 4. RegistrationAdapter.py: Registration adapter for Vehicle and vehicleRegistrationSystem class instances.
 5. Main.py: Example driver program.
 6. Output.txt: Output for the current Main.py.
+7. ClassDiagram.png
+8. SequenceDiagramOne_32.png: Sequence diagram for vehicle registration.
+9. SequenceDiagramTwo_32.png: Sequence diagram for vehicle renewal.
+10. TaskOneUML_32.zargo: argoUML file
