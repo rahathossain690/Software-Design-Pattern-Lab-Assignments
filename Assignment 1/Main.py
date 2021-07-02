@@ -13,7 +13,7 @@ from RegistrationAdapter import RegistrationAdapter
 if __name__ == '__main__':
 
 
-    """Declaring several vahicles"""
+    """Declaring several vehicles"""
     
     vehicle_1 = Vehicle(
         owner="Rahat Hossain", 
