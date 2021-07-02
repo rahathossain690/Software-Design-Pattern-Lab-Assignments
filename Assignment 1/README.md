@@ -32,3 +32,4 @@ vehicle owner (in any City) and the related registration details.
 8. SequenceDiagramOne_32.png: Sequence diagram for vehicle registration.
 9. SequenceDiagramTwo_32.png: Sequence diagram for vehicle renewal.
 10. TaskOneUML_32.zargo: argoUML file
+11. SDP_Assignment_TaskOne.docx: Assumption details and basic description about the assignment.
