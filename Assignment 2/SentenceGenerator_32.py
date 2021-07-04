@@ -5,13 +5,13 @@ from random import randint, sample
 
 class SentenceGenerator():
 
-    def __init__(self, caseStrategy=None, wordConstructionStrategy=None):
+    def __init__(self, caseStrategy, wordConstructionStrategy):
         self.caseStrategy = caseStrategy
         self.wordConstructionStrategy = wordConstructionStrategy
         self.wordList = []
 
     def add(self, word):
-        self.wordList.append( self.caseStrategy(word) )
+        self.wordList.append( self.caseStrategy(word.strip()) )
 
     
     def setCaseSrategy(self, caseStrategy):
@@ -97,16 +97,17 @@ class OrderedWordConstruction(WordConstructionStrategy):
 class RandomSentenceGenerator(SentenceGenerator):
     
     def __init__(self):
-        self.setCaseSrategy(LowerCaseStrategy())
-        self.setWordConstructionStrategy(RandomWordConstruction())
-        self.wordList = []
+        SentenceGenerator.__init__(self, caseStrategy=LowerCaseStrategy(), wordConstructionStrategy=RandomWordConstruction())
 
 class SortedSentenceGenerator(SentenceGenerator):
     
     def __init__(self):
-        self.setCaseSrategy(LowerCaseStrategy())
-        self.setWordConstructionStrategy(SortedWordConstruction())
-        self.wordList = []
+        SentenceGenerator.__init__(self, caseStrategy=LowerCaseStrategy(), wordConstructionStrategy=SortedWordConstruction())
+
+class OrderedSentenceGenerator(SentenceGenerator):
+
+    def __init__(self):
+        SentenceGenerator.__init__(self, caseStrategy=UpperCaseAndReverseStrategy(), wordConstructionStrategy=OrderedWordConstruction())
 
 
 
@@ -124,41 +125,32 @@ if __name__ == "__main__":
         option = raw_input("Your option: ")
         print("")
         if option == "1":
-            try: 
-                print("** Random Sentence Generator **")
-                rsg = RandomSentenceGenerator()
-                n_word = int(raw_input("Number of words: "))
-                for _ in range(n_word):
-                    rsg.add(str(raw_input("Word #{0}: ".format(_))))
-                print("")
-                print("Generated Sentence: {0}".format(str(rsg)))
-                print("")
-            except:
-                print("Error encountered. Try again.")
+            print("** Random Sentence Generator **")
+            rsg = RandomSentenceGenerator()
+            n_word = int(raw_input("Number of words: "))
+            for _ in range(n_word):
+                rsg.add(str(raw_input("Word #{0}: ".format(_))))
+            print("")
+            print("Generated Sentence: {0}".format(str(rsg)))
+            print("")
         elif option == "2":
-            try: 
-                print("** Sorted Sentence Generator **")
-                ssg = SortedSentenceGenerator()
-                n_word = int(raw_input("Number of words: "))
-                for _ in range(n_word):
-                    ssg.add(str(raw_input("Word #{0}: ".format(_))))
-                print("")
-                print("Generated Sentence: {0}".format(str(ssg)))
-                print("")
-            except:
-                print("Error encountered. Try again.")
+            print("** Sorted Sentence Generator **")
+            ssg = SortedSentenceGenerator()
+            n_word = int(raw_input("Number of words: "))
+            for _ in range(n_word):
+                ssg.add(str(raw_input("Word #{0}: ".format(_))))
+            print("")
+            print("Generated Sentence: {0}".format(str(ssg)))
+            print("")
         elif option == "3":
-            try: 
-                print("** Ordered Sentence Generator **")
-                osg = OrderedSentenceGenerator()
-                n_word = int(raw_input("Number of words: "))
-                for _ in range(n_word):
-                    osg.add(str(raw_input("Word #{0}: ".format(_))))
-                print("")
-                print("Generated Sentence: {0}".format(str(osg)))
-                print("")
-            except:
-                print("Error encountered. Try again.")
+            print("** Ordered Sentence Generator **")
+            osg = OrderedSentenceGenerator()
+            n_word = int(raw_input("Number of words: "))
+            for _ in range(n_word):
+                osg.add(str(raw_input("Word #{0}: ".format(_))))
+            print("")
+            print("Generated Sentence: {0}".format(str(osg)))
+            print("")
         else:
             print("Unrecognized command")
         break
