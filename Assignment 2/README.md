@@ -1,4 +1,4 @@
-# Assignment 1
+# Assignment 2
 Python code for assignment 2. This code uses strategy design pattern.
 
 # Installing
