@@ -1,0 +1,4 @@
+Button, This is a button, 100, 100
+EditBox, This is an edit text, 300, 300, #2d2d2d, yellow, 300, 300
+TextBox, This is a text box, 700, 400, green, red, 500, 400
+TextBox, This is another text box, 100, 700, blue, orange, 200, 100

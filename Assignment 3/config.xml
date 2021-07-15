@@ -1,0 +1,6 @@
+<wraper>
+    <Button value="This is a button" X="100" Y="100"/>
+    <EditBox value="This is an edit text" X="300" Y="300" Color="#2d2d2d" Bg-color="yellow" Width="300" Height="300"/>
+    <TextBox value="This is a text box" X="700" Y="400" Color="green" Bg-color="red" Width="500" Height="400"/>
+    <TextBox value="This is another text box" X="100" Y="700" Color="blue" Bg-color="orange" Width="200" Height="100"/>
+</wraper>
